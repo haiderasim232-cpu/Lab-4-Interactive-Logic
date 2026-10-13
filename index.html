@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountain Quest — Choose Your Adventure</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Choose Your Adventure</p>
+    <h1>Mountain Quest</h1>
+    <p>Your choices decide where the journey ends.</p>
+  </header>
+  <main>
+    <section class="status-panel" aria-label="Adventure status">
+      <p>Location: <strong id="location">Base Camp</strong></p>
+      <p>Energy: <strong id="energy">3 / 3</strong></p>
+    </section>
+    <section class="story-panel" aria-labelledby="story-title">
+      <div id="story-content" aria-live="polite">
+        <p id="stage-label">The beginning</p>
+        <h2 id="story-title">The mountain is waiting.</h2>
+        <p id="story-description">
+          You arrive at base camp with three energy points.
+          A trail leads toward a fork in the mountain.
+          Will you begin the climb?
+        </p>
+        <p id="feedback">
+          Walking uses energy. Resting restores one energy point,
+          up to a maximum of three.
+        </p>
+      </div>
+      <div class="choices">
+        <button id="choice-one" type="button">
+          Begin the hike
+        </button>
+        <button id="choice-two" type="button">
+          Stay at camp
+        </button>
+        <button id="rest-button" type="button">
+          Rest
+        </button>
+      </div>
+    </section>
+    <section class="instructions" aria-labelledby="instructions-title">
+      <h2 id="instructions-title">How to play</h2>
+      <p>
+        Read the story and choose your next action.
+        Watch your energy: the steep route requires more
+        energy than the forest path.
+        You can rest before continuing your journey.
+      </p>
+      <p>
+        Find the summit, discover the lake, or return to camp.
+        Restart to try a different route.
+      </p>
+    </section>
+    <div class="restart-controls">
+      <button id="restart-button" type="button">
+        Restart adventure
+      </button>
+    </div>
+  </main>
+  <footer>
+    <p>Mountain Quest · A fictional interactive adventure.</p>
+  </footer>
+</body>
+</html>
